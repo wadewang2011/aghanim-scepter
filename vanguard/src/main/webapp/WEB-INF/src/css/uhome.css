@@ -1,0 +1,65 @@
+/**
+ * @author xiezhenzong
+ */
+body {
+    background-image: url('../img/uhome-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar .container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.radiance-header .navbar {
+    border-radius: 0px;
+}
+
+.navbar-header .navbar-brand img {
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin-right: 8px;
+    margin-top: -5px;
+}
+
+.navbar-header .navbar-brand span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4d4d4f;
+}
+
+#search-input {
+    width: 330px;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.navbar-nav a {
+    font-size: 18px;
+}
+
+.navbar-nav a:HOVER {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.radiance-body {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.radiance-body .centered {
+    text-align:center
+}
+
+.radiance-body .centered .quote {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.radiance-body .centered .quote .go-h3 {
+    margin-top: 70px;
+}
