@@ -3,7 +3,7 @@
  */
 define(function(require) {
 
-    var util = require('lib/util');
+    var util = require('er/util');
     var vanguard = require('vanguard');
 
     var model = require('index/model');
