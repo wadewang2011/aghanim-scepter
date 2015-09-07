@@ -47,6 +47,7 @@ exports.exclude = [
     'tool',
     'doc',
     'test',
+    'debug',
     'module.conf',
     'dep/packages.manifest',
     'dep/*/*/test',

@@ -80,10 +80,13 @@
         src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-6/esl.js"></script>
     <script>
     require.config({
-        'baseUrl': '../src/js',
-        'paths': {
-            'lib': 'lib'
-        }
+        'baseUrl': 'src',
+        'paths': { 'lib': 'lib' },
+        'packages': [{
+                'name': 'etpl',
+                'location': '../dep/etpl/3.0.1/src',
+                'main': 'main'
+            }]
     })
     require(['admin/admin']);
                 </script>

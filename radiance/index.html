@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="./src/css/common.css">
-<link rel="stylesheet" href="./src/css/index.css">
-<link rel="stylesheet" href="./src/css/animate.min.css">
+<link rel="stylesheet" href="lib/animate.min.css">
+<link rel="stylesheet" href="src/css/common.css">
+<link rel="stylesheet" href="src/css/index.css">
 <title>海逍遥</title>
 </head>
 <body>
@@ -80,15 +80,13 @@
     <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-6/esl.js"></script>
     <script type="text/javascript">
                     require.config({
-                        'baseUrl': './src/js',
-                        'paths': {
-                            'lib': 'lib'
-                        },
+                        'baseUrl': 'src',
+                        'paths': { 'lib': 'lib' },
                         'packages': [{
-                            'name': 'etpl',
-                            'location': './dep/etpl/2.1.0/src',
-                            'main': 'main'
-                        }]
+                                'name': 'etpl',
+                                'location': '../dep/etpl/3.0.1/src',
+                                'main': 'main'
+                            }]
                     })
                     require(['index/main']);
                 </script>
