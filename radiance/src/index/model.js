@@ -3,7 +3,7 @@
  */
 define(function(require) {
 
-    var vanguard = require('vanguard');
+    var vanguard = require('../module/vanguard');
 
     var model = {};
 
@@ -13,6 +13,7 @@ define(function(require) {
         var self = this;
         vanguard.post('/vanguard/hotTravelList', {}, {
             'ok': function(data) {
+                console.log("....");
                 self.dataSource = data;
                 callback();
             }
