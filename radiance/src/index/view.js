@@ -3,7 +3,8 @@
  */
 define(function(require) {
 
-    var Navbar = require('../module/navbar/navbar')
+    var Navbar = require('../module/navbar/navbar');
+    var Slider = require('../module/slider/slider');
 
     var etpl = require('etpl');
     require('etpl/tpl!./hot_travel_list.tpl');
@@ -15,6 +16,13 @@ define(function(require) {
         }
     };
 
+    var sliderContent = [{
+        'title': 'oooh',
+        'detail': 'hello world',
+        'link': '/index',
+        'img': '../../resources/img/640.jpg'
+    }];
+
     var view = {};
 
     view.model = null;
@@ -22,6 +30,7 @@ define(function(require) {
     view.render = function() {
 
         new Navbar().render('.header');
+        new Slider().render('.intro', sliderContent);
 
         var html = etpl.render('hot-travel-list', {
             hotTravelList: this.model.dataSource

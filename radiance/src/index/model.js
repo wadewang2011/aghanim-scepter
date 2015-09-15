@@ -13,7 +13,6 @@ define(function(require) {
         var self = this;
         vanguard.post('/vanguard/hotTravelList', {}, {
             'ok': function(data) {
-                console.log("....");
                 self.dataSource = data;
                 callback();
             }

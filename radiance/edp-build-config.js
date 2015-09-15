@@ -12,7 +12,7 @@ var pageEntries = 'html,htm,phtml,tpl,vm';
 
 exports.getProcessors = function () {
     var lessProcessor = new LessCompiler({
-        files: ['src/resources/css/**/*.less']
+        files: ['src/resources/css/style.less']
     });
     var pathMapperProcessor = new PathMapper({
         replacements: [

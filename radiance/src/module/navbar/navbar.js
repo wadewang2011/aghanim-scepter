@@ -1,10 +1,12 @@
 /**
- * 导航栏模块
+ * 导航栏
  */
 define(function(require) {
 
     var etpl = require('etpl');
     require('etpl/tpl!./navbar.tpl');
+
+    var navbarClass = 'navbar-container';
 
     function Navbar() {
 
@@ -13,7 +15,9 @@ define(function(require) {
     Navbar.prototype.render = function(main, option) {
       
 		var html = etpl.render('navbar');
-        $(main).html(html);
+        var navbarContainer = $(main);
+        navbarContainer.addClass(navbarClass);
+        navbarContainer.html(html);
 
     };
 
