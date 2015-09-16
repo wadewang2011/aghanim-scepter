@@ -2,17 +2,70 @@
 
 .slider-container {
 	height: 78%;
-	min-height: 650px;
-	overflow: hidden;
+	min-height: @min-slider-height;
 	background-color: #fff;
 	border-bottom: 2px solid #fff;
 	margin-top: -1 * @navbar-height;
-	position: relative;
 	z-index: 2;
-}
 
-.slider-container section {
-	background-color: #fff;
-	overflow: hidden;
+	.slider-item {
+		min-height: @min-slider-height;
 
+		.slider-item-inner {
+			padding: 0.5 * @min-slider-height 0 110px 0;
+			text-align: center;
+
+			.travel-name {
+				font-size: 40px;
+				color: #fff;
+				text-shadow: rgba(0, 0, 0, 0.0470588) 0px 0px 1px, rgba(0, 0, 0, 0.298039) 0px 1px 2px;
+			}
+
+			.travel-link {
+				font-size: 32px;
+				color: #fff;
+			}
+		}
+	}
+	
+	.dots {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 0 4px;
+			text-indent: -999em;
+			border: 2px solid #fff;
+			border-radius: 6px;
+			cursor: pointer;
+			opacity: .4;
+			-webkit-transition: background .5s, opacity .5s;
+			-moz-transition: background .5s, opacity .5s;
+			transition: background .5s, opacity .5s;
+		}
+
+		li.active {
+			background: #fff;
+			opacity: 1;
+		}
+	} 
+
+	/** 轮播图控件所需css */
+	position: relative;
+	overflow: auto;
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			float: left; 
+		}
+	}
 }

@@ -19,6 +19,13 @@
         var sliderContainer = $(main);
         sliderContainer.addClass(sliderClass);
         sliderContainer.html(html);
+
+        sliderContainer.unslider({
+            'speed': 500,
+            'delay': 3000,
+            'keys': true,
+            'dots': true,
+        });
     };
  
     return Slider;
