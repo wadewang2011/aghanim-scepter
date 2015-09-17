@@ -5,6 +5,7 @@ define(function(require) {
 
     var Navbar = require('../module/navbar/navbar');
     var Slider = require('../module/slider/slider');
+    var Footer = require('../module/footer/footer');
 
     var etpl = require('etpl');
     require('etpl/tpl!./hot_travel_list.tpl');
@@ -36,6 +37,7 @@ define(function(require) {
 
         new Navbar().render('.header');
         new Slider().render('.intro', sliderContent);
+        new Footer().render('.footer');
 
         var html = etpl.render('hot-travel-list', {
             hotTravelList: this.model.dataSource

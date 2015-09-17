@@ -11,36 +11,69 @@ exports.output = path.resolve(__dirname, 'output');
 var pageEntries = 'html,htm,phtml,tpl,vm';
 
 exports.getProcessors = function () {
-    var lessProcessor = new LessCompiler({
-        files: ['src/resources/css/style.less']
-    });
-    var pathMapperProcessor = new PathMapper({
-        replacements: [
-            {
-                type: 'html', tag: 'link',
-                attribute: 'href', extnames: pageEntries
-            },
-            {
-                type: 'html', tag: 'img',
-                attribute: 'src', extnames: pageEntries
-            },
-            {
-                type: 'html', tag: 'script',
-                attribute: 'src', extnames: pageEntries
-            },
-            {
-                extnames: 'css,less', replacer: 'css'
+    return [
+        new LessCompiler({
+            files: ['src/resources/css/style.less']
+        }), 
+        new CssCompressor(),
+        new JsCompressor(),
+        new MD5Renamer({
+            files: [
+                '*.html',
+                'src/resources/css/*',
+                'src/resources/img/*',
+                '!src/resource/img/favicon.ico'
+            ],
+            s: 1,
+            e: 16,
+            outputTemplate: '{basename}-{md5sum}{extname}',
+            replacements: {
+                html: {
+                    tags: [
+                        {tag: 'img', attribute: 'src'},
+                        {
+                            tag: 'link',
+                            attribute: 'href',
+                            condition: function (matcher) {
+                                return !(/favicon\.ico/.test(matcher));
+                            }
+                        },
+                        {tag: 'script', attribute: 'src'}
+                    ],
+                    files: [ '*.html']
+                },
+                css: {
+                    files: [ '*.css', '*.less' ]
+                },
+                js: {
+                    files: [ '*.js' ]
+                }
             }
-        ],
-        mapper: function (value) {
-            if (/dep\//.test(value)) {
-                return value.replace('src', 'asset');
-            }
-            return value;
-        }
-    });
-
-    return [lessProcessor, new CssCompressor(), new JsCompressor(), pathMapperProcessor, new AddCopyright()];
+        }),
+        new PathMapper({
+            replacements: [
+                {
+                    type: 'html', tag: 'link',
+                    attribute: 'href', extnames: pageEntries
+                },
+                {
+                    type: 'html', tag: 'img',
+                    attribute: 'src', extnames: pageEntries
+                },
+                {
+                    type: 'html', tag: 'script',
+                    attribute: 'src', extnames: pageEntries
+                },
+                {
+                    extnames: 'css,less', replacer: 'css'
+                }
+            ]
+        }),
+        new AddCopyright(),
+        new OutputCleaner({
+            files: ['asset/resources/css/*.less', 'asset/resources/css/style.css']
+        })
+    ];
 };
 
 exports.exclude = [

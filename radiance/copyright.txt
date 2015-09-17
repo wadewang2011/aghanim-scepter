@@ -1,1 +1,1 @@
-'/*! ' + new Date().getFullYear() + ' Baidu Inc. All Rights Reserved */\n'
+/*! 2015 海逍遥公司. All Rights Reserved */
