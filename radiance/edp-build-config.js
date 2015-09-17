@@ -35,15 +35,15 @@ exports.getProcessors = function () {
                             tag: 'link',
                             attribute: 'href',
                             condition: function (matcher) {
-                                return !(/favicon\.ico/.test(matcher));
+                                return !(/favicon\.ico/.test(matcher)) && (/href=\"src.*/.test(matcher));
                             }
                         },
                         {tag: 'script', attribute: 'src'}
                     ],
-                    files: [ '*.html']
+                    files: [ '*.html' ]
                 },
                 css: {
-                    files: [ '*.css', '*.less' ]
+                    files: [ '*.css' ]
                 },
                 js: {
                     files: [ '*.js' ]
@@ -64,6 +64,9 @@ exports.getProcessors = function () {
                     type: 'html', tag: 'script',
                     attribute: 'src', extnames: pageEntries
                 },
+                {   
+                    extnames: 'html', replacer: 'module-config' 
+                },
                 {
                     extnames: 'css,less', replacer: 'css'
                 }
@@ -71,7 +74,7 @@ exports.getProcessors = function () {
         }),
         new AddCopyright(),
         new OutputCleaner({
-            files: ['asset/resources/css/*.less', 'asset/resources/css/style.css']
+            files: ['*.less']
         })
     ];
 };
@@ -82,6 +85,7 @@ exports.exclude = [
     'test',
     'debug',
     'module.conf',
+    'package.json',
     'dep/packages.manifest',
     'dep/*/*/test',
     'dep/*/*/doc',
@@ -103,7 +107,10 @@ exports.exclude = [
     '*.bak',
     '*.swp',
     'README',
-    'copyright.txt'
+    'copyright.txt',
+    'f_admin.html',
+    'f_uhome.html',
+    'login.html'
 ];
 
 /* eslint-disable guard-for-in */
