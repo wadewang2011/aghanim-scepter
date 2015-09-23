@@ -9,6 +9,7 @@
 
     <artifactId>mekansm</artifactId>
     <version>${mekansm.version}</version>
+    <name>mekansm</name>
 
     <dependencies>
         <dependency>

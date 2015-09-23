@@ -15,7 +15,9 @@ exports.getProcessors = function () {
         new LessCompiler({
             files: ['src/resources/css/style.less']
         }), 
-        new CssCompressor(),
+        new CssCompressor({
+            exclude: ['tool/*.css']
+        }),
         new JsCompressor(),
         new MD5Renamer({
             files: [
@@ -72,7 +74,16 @@ exports.getProcessors = function () {
                 }
             ]
         }),
-        new AddCopyright(),
+        new AddCopyright({
+            files: [
+                '*.css',
+                '*.tpl',
+                '*.html',
+                '*.js',
+                '!tool/*',
+                '!dep/**/*',
+            ]
+        }),
         new OutputCleaner({
             files: ['*.less']
         })
@@ -80,7 +91,6 @@ exports.getProcessors = function () {
 };
 
 exports.exclude = [
-    'tool',
     'doc',
     'test',
     'debug',
