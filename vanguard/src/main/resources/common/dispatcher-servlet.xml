@@ -9,9 +9,9 @@
     <mvc:annotation-driven />
     <context:component-scan
         base-package="com.hxy.vanguard.action,com.hxy.vanguard.page" />
-    <mvc:resources mapping="/src/img/**" location="/WEB-INF/src/img/" />
-    <mvc:resources mapping="/src/js/**" location="/WEB-INF/src/js/" />
-    <mvc:resources mapping="/src/css/**" location="/WEB-INF/src/css/" />
+    <mvc:resources mapping="/asset/**" location="/WEB-INF/asset/" />
+    <mvc:resources mapping="/tool/**" location="/WEB-INF/tool/" />
+    <mvc:resources mapping="/dep/**" location="/WEB-INF/dep/" />
 
     <mvc:view-controller path="/" view-name="index" />
 

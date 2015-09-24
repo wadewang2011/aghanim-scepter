@@ -3,8 +3,6 @@
  */
 define(function(require) {
 
-    var debug = true;
-
     var statusMap = {
         'syserror': '100',
         'ok': '200',
@@ -42,11 +40,11 @@ define(function(require) {
                 alert('系统错误，status: ' + textStatus + ', error: ' + errorThrown);
             };
 
-        if (debug) {
-            var mockResponse = require('../../debug/mock').getMockData(path);
-            okHanlder(mockResponse, successCallback);
-            return;
-        }
+//        if (debug) {
+//            var mockResponse = require('../../debug/mock').getMockData(path);
+//            okHanlder(mockResponse, successCallback);
+//            return;
+//        }
 
         $.ajax(path, {
             'contentType': 'application/json;charset=utf-8',

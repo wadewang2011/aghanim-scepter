@@ -21,12 +21,12 @@ define(function(require) {
         'title': 'oooh',
         'detail': 'hello world',
         'link': '/index',
-        'img': '/src/resources/img/640.jpg'
+        'img': '/asset/resources/img/640.jpg'
     }, {
         'title': 'no',
         'detail': 'good bye',
         'link': '/index',
-        'img': '/src/resources/img/641.jpg'
+        'img': '/asset/resources/img/641.jpg'
     }];
 
     var view = {};

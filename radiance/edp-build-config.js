@@ -78,7 +78,6 @@ exports.getProcessors = function () {
             files: [
                 '*.css',
                 '*.tpl',
-                '*.html',
                 '*.js',
                 '!tool/*',
                 '!dep/**/*',

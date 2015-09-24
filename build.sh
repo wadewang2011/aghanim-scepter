@@ -12,9 +12,11 @@ edp build
 
 exitOnError
 
-cd ..
+cd -
 
-mv ./radiance/output/* ./vanguard/src/main/webapp/WEB-INF/ && rm -rf ./radiance/output
+mv ./radiance/output/* ./vanguard/src/main/webapp/WEB-INF/ 
+
+rm -rf ./radiance/output
 
 mvn clean install
 
@@ -24,4 +26,6 @@ cd ./vanguard/src/main/webapp/WEB-INF/
 
 rm -rf asset/ dep/ tool/ *.html
 
-cp ./vanguard/target/vanguard.war .
+# cd -
+
+# cp ./vanguard/target/vanguard.war .
