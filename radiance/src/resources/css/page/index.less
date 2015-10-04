@@ -1,0 +1,133 @@
+@import "./base.less";
+
+.travel-container .container-fluid {
+    width: @page-width;
+    min-width: @page-width;
+    margin-bottom: 60px;
+}
+
+.travel-category {
+    .title {
+
+        width: 100%;
+        margin: 30px 0;
+        background-color: #f2f2f2;
+        padding: 0;
+
+        .title-before {
+            float: left;
+            width: 10px;
+            height: 50px;
+            background-color: #ad0711;
+        }
+
+        h1 {
+            float: left;
+            margin: 0;
+            height: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ad0711;
+            background-color: #fff;
+        }
+    }
+}
+
+.travel {
+
+    .travel-container {
+        overflow: hidden;
+        padding-bottom: 20px;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            min-width: 340px;
+            min-height: 250px;
+        }
+
+        .image:HOVER {
+            cursor: pointer;
+        }
+
+        .ribbon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 8px 10px 10px 12px;
+            font-size: 14px;
+            color: #ffffff;
+            background: #008cf8;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .ribbon:before {
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 0;
+            height: 0;
+            content: "";
+            display: block;
+            border-top: 14px solid transparent;
+            border-left: 15px solid transparent;
+            border-top-color: #0163ae;
+        }
+    }
+
+}
+
+/** 这里的popover的container时body，所以不能放在.travel里 */
+.travel-detail {
+
+    .popover-title {
+        font-size: 32px;
+        color: #2a2a2a;
+        font-weight: bold;
+    }
+
+    .popover-content {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .travel-content {
+            h3 {
+                font-size: 16px;
+                font-weight: bold;
+                color: #646464;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+
+            .travel-desc {
+                text-indent: 2em;
+                color: #646464;
+                font-size: 13px;
+                line-height: 24px;
+            }
+            
+            .travel-route, .travel-price {
+                color: #4a75b3;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: bold;
+
+                span {
+                    color: #646464;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    font-weight: bold;
+                }
+            }
+
+            .travel-route {
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

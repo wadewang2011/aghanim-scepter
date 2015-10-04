@@ -21,11 +21,12 @@
         sliderContainer.html(html);
 
         sliderContainer.unslider({
-            'speed': 500,
-            'delay': 3000,
-            'keys': true,
             'dots': true,
+            'fluid': true
         });
+
+        // 根据轮播图页数设置dots的长度
+        sliderContainer.find(".dots").css("width", 60 + option.length * 30);
     };
  
     return Slider;

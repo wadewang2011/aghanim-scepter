@@ -10,19 +10,12 @@ exports.port = 8848;
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
 
-//var ms = require('mockservice');
-//ms.config({dir: __dirname + '/debug'});
-
 exports.getLocations = function () {
     return [
         {
             location: /\/$/,
             handler: home('index.html')
         },
-  //      {
-  //          location: /^\/request.ajax/, 
-  //          handler: ms.request()
-   //     },
         {
             location: /^\/redirect-local/,
             handler: redirect('redirect-target', false)
