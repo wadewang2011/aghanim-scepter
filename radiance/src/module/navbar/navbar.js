@@ -13,12 +13,9 @@ define(function(require) {
     }
 
     Navbar.prototype.render = function(main, option) {
-      
 		var html = etpl.render('navbar');
-        var navbarContainer = $(main);
-        navbarContainer.addClass(navbarClass);
-        navbarContainer.html(html);
-
+        var navbarContainerParent = $(main);
+        navbarContainerParent.html(html);
     };
 
     return Navbar;

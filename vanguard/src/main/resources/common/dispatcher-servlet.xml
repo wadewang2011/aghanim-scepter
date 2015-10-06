@@ -14,6 +14,7 @@
     <mvc:resources mapping="/dep/**" location="/WEB-INF/dep/" />
 
     <mvc:view-controller path="/" view-name="index" />
+    <mvc:view-controller path="/zhizhao" view-name="zhizhao"/>
 
     <bean id="freemarkerConfig"
         class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">

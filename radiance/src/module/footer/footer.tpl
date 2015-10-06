@@ -3,7 +3,7 @@
     <div class="footer-main">
         <div class="row">
             <div class="col-xs-1 col-md-1 col-lg-1"></div>
-            <div class="footer-content col-xs-3 col-md-3 col-lg-3">
+            <div class="footer-content col-xs-2 col-md-2 col-lg-2">
                 <div class="title">
                     <h4>友情链接</h4>
                 </div>
@@ -31,26 +31,27 @@
                 </div>
                 <ul class="link">
                     <li>
-                        <a href="#" target="_blank">我们的故事</a>
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzA4MDk4MTMyNA==&mid=208016530&idx=1&sn=b3c6ea46b36b3f3f615bc06c9311ad2c" target="_blank">我们的故事</a>
                     </li>
                     <li>
-                        <p>地址：北京市海淀区，blabla</p>
+                        <p>地址：北京市昌平区城北街道西关路20号2号楼908室</p>
                     </li>
                     <li>
                         <p>电话：18510248672</p>
                     </li>
                     <li>
-                        <a href="mailto:haixiaoyaotravel@163.com">邮件: haixiaoyaotravel@163.com</a>
+                        <span>邮件：</span>
+                        <a href="mailto:haixiaoyaotravel@163.com">haixiaoyaotravel@163.com</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-qr col-xs-2 col-md-2 col-lg-2">
                 <h4 class="title">官方微信公众号</h4>
-                <img class="qr-img" alt="官方二维码" width="120" height="120" src="./src/resources/img/haixiaoyao.png">
+                <img class="qr-img" alt="官方二维码" width="120" height="120" src="/src/resources/img/haixiaoyao.png">
             </div>
             <div class="footer-qr col-xs-2 col-md-2 col-lg-2">
                 <h4 class="title">客服微信号</h4>
-                <img class="qr-img" alt="逍遥君二维码" width="120" height="120" src="./src/resources/img/xiaoyaojun.png">
+                <img class="qr-img" alt="逍遥君二维码" width="120" height="120" src="/src/resources/img/xiaoyaojun.png">
             </div>
         </div>
     </div>
@@ -59,7 +60,7 @@
         <div>
             国家旅游局经营许可证号 L-BJ-01703
             <a href="http://www.miibeian.gov.cn/"  target="_blank">京ICP证</a>
-            <a href="#">营业执照信息</a>
+            <a href="/zhizhao">营业执照信息</a>
         </div>
          Copyright © 2014-2015 海逍遥旅游股份有限公司 All Rights Reserved. 
     </div>
