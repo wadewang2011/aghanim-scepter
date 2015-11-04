@@ -1,0 +1,99 @@
+.no-underline, .no-underline:HOVER {
+    text-decoration: none;
+}
+body{
+	background: #f1f1f1;
+	margin: 0px;
+	font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","微软雅黑",'Segoe UI',Tahoma,"宋体b8b\4f53",SimSun,sans-serif;
+}
+.bor{
+	border: 2px solid #000;
+	padding: 22px;
+	margin-top: 10px;
+}
+.header{
+	height: 72px;
+    line-height: 55px;
+    background: #39ac6a;
+    color: #fff;
+}
+.navbar-header{
+	margin-left: 69px;
+    padding-top: 7px;
+}
+.h3{
+	color: #fff;
+    font-weight: bold;
+    font-size: 33px;
+}
+.container{
+	margin:20px 40px 40px 69px;
+}
+.titleH2{
+	font-size: 18px;
+    font-weight: 700;
+}
+.secret{
+	color: #999;
+    font-weight: 400;
+    font-size: 14px;
+}
+.wrapper{
+	width: 1000px;
+    background-color: #fff;
+    height: auto;
+    padding: 5px 20px 20px 20px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+.info_title{
+	font-size: 16px;
+    font-weight: 300;
+}
+.star{
+	color: #e26b46;
+    margin-right: 3px;
+}
+.input_text{
+	border-radius: 2px;
+    border: 1px solid #ccc;
+    line-height: 29px;
+    font-size: 12px;
+    width: 400px;
+    padding-left: 12px;
+    height: 37px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+}
+.buttonw{
+	margin: 0px 40px 40px 69px;
+}
+.button{
+	font-weight: bold;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #4a8e67;
+    width: 99px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 2px;
+    background: #39ac6a;
+    cursor: pointer;
+}
+.price{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+.singlep{
+	color: #e4393c;
+    margin: 0 5px;
+    font-size: 18px;
+    font-family: tahoma;
+}
+.hide{
+	float: right;
+    position: relative;
+    top: -51px;
+    display: none;
+}

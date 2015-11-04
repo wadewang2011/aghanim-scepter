@@ -1,0 +1,24 @@
+package com.hxy.courierr.dao.impl;
+
+import org.springframework.stereotype.Repository;
+
+import com.hxy.courierr.DAOSupport;
+import com.hxy.courierr.Order;
+import com.hxy.courierr.dao.OrderDAO;
+
+@Repository("orderDao")
+public class OrderDAOImpl extends DAOSupport implements OrderDAO {
+
+	@Override
+	public Order getOrdByRoute(String routeid) {
+		// TODO Auto-generated method stub
+		return getOrder("select ");
+		
+	}
+
+	private Order getOrder(String sql) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="./src/resources/css/common.css">
+        <title>海逍遥|旅行报名</title>
+        <script type="text/javascript" src="./src/module/jquery.min.js"></script>
+    </head>
+<body>
+    <header class="header">
+        <div class="navbar-header">
+            <a href="/" class="no-underline"> 
+                <span class="h3">海逍遥旅行</span>
+            </a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="titleH2Wrapper">
+            <h3 class="titleH2" >旅行活动报名
+                <span class="secret">
+                    (使用在线预订，需要填写以下信息。所有您填写的信息会得到保密)
+                </span>
+            </h3>
+        </div>
+        <div class="wrapper" id="info1">
+            <div class="info">
+                <h3 class="info_title">您选择的旅行路线：</h3>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span class="secret">路线一</span>
+                </div>
+                <div class="hide">
+                    <input type="submit" class="button delete" value="删除此报名">
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title">您选择的路线时间：</h3>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span class="secret">2015.10.24-2015.11.2</span>
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title"><span class="star">*</span>姓名：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="为了确保预订, 姓名一定要和您的身份证上的相同">
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title"><span class="star">*</span>身份证号：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="身份证号用来购买个人旅行保险, 为必须信息。没有身份证可选择其它证件">
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title"><span class="star">*</span>手机号码：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="手机号码用来与您取得正常联系">
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title"><span class="star">*</span>紧急联系人：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="情况紧急下无法与您取得联系时为确保旅行顺利的第一联系人">
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="info_title"><span class="star">*</span>紧急联系人手机：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="紧急联系人的有效联系方式">
+                </div>
+            </div>
+             <div class="info">
+                <h3 class="info_title"><span class="star">*</span>您的常用Email：</h3>
+                <div class="checkbox">
+                    <input type="text" class="input_text" placeholder="Email用于接收出发前准备邮件等重要信息，请务必确认其真实有效">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttonw">
+        <p class="price">总价:<span class="singlep">3500</span></p>
+        <input id="sendMessage" type="submit" class="button add" value="添加小伙伴">
+        <input id="sendMessage" type="submit" class="button" value="提交">
+    </div>
+    
+    <script type="text/javascript">
+        var i=2;
+        $(".add").click(function(e){
+            var sourceNode = document.getElementById("info1");  
+            var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
+            clonedNode.setAttribute("id", "info" + i); // 修改一下id 值，避免id 重复 
+            sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点 
+            i++;
+        });
+        // $(".wrapper").mouseover(function(e){
+        //     $(this).find(".hide").show();
+        // });
+        //  $(".wrapper").mouseout(function(e){
+        //     $(this).find(".hide").hide();
+        // });
+    </script>
+</body>
+</html>
