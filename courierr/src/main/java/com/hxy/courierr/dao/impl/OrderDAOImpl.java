@@ -10,15 +10,20 @@ import com.hxy.courierr.dao.OrderDAO;
 public class OrderDAOImpl extends DAOSupport implements OrderDAO {
 
 	@Override
-	public Order getOrdByRoute(String routeid) {
+	public Order getOrdById(String orderid) {
 		// TODO Auto-generated method stub
-		return getOrder("select ");
+		return getOrder("select * from  ");
 		
 	}
 
 	private Order getOrder(String sql) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	public void setOrder(){
+		
 	}
 
 }

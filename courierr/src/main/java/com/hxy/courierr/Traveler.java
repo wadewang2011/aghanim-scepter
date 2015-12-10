@@ -2,6 +2,7 @@ package com.hxy.courierr;
 
 public class Traveler {
 	int RouteId;
+	int UserId;
 	String Name;
 	String Sex;
 	String ID;
@@ -14,6 +15,9 @@ public class Traveler {
 	String Other;
 	public Traveler(){
 		Other = null;
+	}
+	public int getUserId(){
+		return UserId;
 	}
 	public int getRoute(){
 		return RouteId;
